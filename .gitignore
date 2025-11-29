@@ -1,0 +1,40 @@
+# ──────────────────────────────
+# Python
+# ──────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# ──────────────────────────────
+# Streamlit
+# ──────────────────────────────
+.streamlit/credentials.toml
+.streamlit/secrets.toml
+
+# ──────────────────────────────
+# Base de datos
+# ──────────────────────────────
+data/*.db
+
+# ──────────────────────────────
+# Sistema
+# ──────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ──────────────────────────────
+# Entorno de desarrollo
+# ──────────────────────────────
+.vscode/
+.idea/
