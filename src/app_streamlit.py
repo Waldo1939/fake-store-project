@@ -20,3 +20,14 @@ else:
     st.write(df.head())
     st.subheader("Precio promedio por categoría")
     st.bar_chart(df.groupby("category_name")["price"].mean())
+
+
+# -------------------------
+# Sidebar filters (primer paso)
+# -------------------------
+
+st.sidebar.title("Filtros")
+
+# 1) Categoría (multiselect)
+all_categories = sorted(df['category_name'].dropna().unique().tolist())
+selected_categories = st.sidebar.multiselect("Categoría", options=all_categories, default=all_categories)
