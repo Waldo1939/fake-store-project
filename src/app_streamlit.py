@@ -31,3 +31,11 @@ st.sidebar.title("Filtros")
 # 1) Categoría (multiselect)
 all_categories = sorted(df['category_name'].dropna().unique().tolist())
 selected_categories = st.sidebar.multiselect("Categoría", options=all_categories, default=all_categories)
+
+# 2) Rango de precios (slider)
+min_price = float(df['price'].min())
+max_price = float(df['price'].max())
+price_range = st.sidebar.slider("Rango de precio", min_value=min_price, max_value=max_price, value=(min_price, max_price))
+
+# 3) Buscador por texto (input)
+search_text = st.sidebar.text_input("Buscar producto (por título)")
